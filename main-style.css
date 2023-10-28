@@ -769,8 +769,7 @@ border-top: 1px solid #aaaaaa;
   margin-left: 0px;
   margin-top: 0px;
 }
-
-#tv-program #tv-program-name {
+.tv-program .tv-program-name {
   display: block;
   margin-left: 5%;
   color:white;
@@ -783,7 +782,7 @@ border-top: 1px solid #aaaaaa;
   text-shadow: 1px 1px 4px #000;
 }
 
-#tv-program #tv-program-episode {
+.tv-program .tv-program-episode {
   padding: 0px;
   display: block;
   margin-left: 5%;

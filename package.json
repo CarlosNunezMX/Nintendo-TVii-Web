@@ -1,0 +1,25 @@
+{
+  "name": "Nintendo-TVii-Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && serve .",
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "serve": "serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pretendonetwork/wiiu-browser-types": "^1.0.0",
+    "@pretendonetwork/wiiu-dialog-types": "^1.0.0",
+    "@pretendonetwork/wiiu-vino-types": "^1.0.0",
+    "applet-types": "github:PretendoNetwork/applet-types",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
