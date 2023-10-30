@@ -7,10 +7,13 @@ export class HomePage extends ComponentTemplate<void>{
         super();
     }
     render(): Promise<HTMLElement> {
-        return fetch('http://192.168.100.206:3000/api/channels/all/mx')
-            .then(response => response.json())
-            .then(data => {
-                return Wrapper(MenuKind.Home)
-            })
+        // return fetch('http://192.168.100.206:3000/api/channels/all/mx')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         return Wrapper(MenuKind.Home)
+        //     })
+        return new Promise(res => {
+            res(Wrapper(MenuKind.Home))
+        })
     }
 }

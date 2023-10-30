@@ -1,0 +1,146 @@
+body.tag {
+    background-image: url('../img/bg4.png');
+    background-color: #555555;
+    white-space: normal;
+}
+
+.tv-tag-moments .moment {
+    display: inline-block;
+    margin: 16px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 17px;
+    text-align: left;
+    position: relative;
+    width: 342px;
+    height: 195px;
+}
+
+.tv-tag-moments .moment:last-child {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.tv-tag-moments .moment-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(192, 192, 196, 0.6);
+    border-radius: 4px;
+}
+
+.tv-tag-moments .moment-content {
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    width: 343px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tv-tag-moments .moment-content.grey {
+    border-top: 1px solid #797e77;
+    background: -webkit-linear-gradient(#8c918a, #656a63);
+}
+
+.tv-tag-moments .post-counter {
+    position: absolute;
+    left: 46px;
+    color: #ffffff;
+    font-size: 16px;
+    top: 24px;
+    box-sizing: border-box;
+}
+
+.tv-tag-moments .post-counter:before {
+    position: absolute;
+    top: -5px;
+    left: -36px;
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAeCAYAAACiyHcXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVFhH7Za9SgQxFEYzgtgpiCD+wBZqYSWCpYUIio2P4JY+hq+hjaVgYWujWNnIgo2IIqKN2Gihq4iFwnhucmfGJeMPuJlFyIHDzU3C5huY3Y2JKInWnDRNeyiTWMcF7MO/0sQGruNFkiTPMvklhFjGGwzBI66iPGg5LE7gHYakiYt6pA+L23ZbeI71SEvLO8HiPWXAdcHp5914kEGXbQuqCiDMafVCVMm01o6GyIkhMmKIjBgio5MhXrV6Id61VsGJVi/ErdbQyH3i1A39EFtaQ3OIctHx4V+0hg35rw3INc7rkeWwYQl38QXbiXzeEa7oUTneHVNg4wxlFuWuOSxzv2AMZf9nrvDcDc0BnnGH2HNtQWmIDMKMUgZd9yNTuIHdtjPmDddwXxoOb7lNBYHAvXiJGTIe0eVvaduPFU/6RNl0nWWHuaq+8gU8+RDK2y+O63TkP2HMB5FUUM7Sw6KzAAAAAElFTkSuQmCC');
+}
+
+.tvRemotePopupModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9100;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 854px;
+    /* Full width */
+    height: 480px;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.tvRemotePopupModal.show {
+    display: block;
+    /* Hidden by default */
+}
+
+.remoteContent {
+    position: absolute;
+    left: 85px;
+    top: 30px;
+    border-radius: 40px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.6);
+}
+
+.tv-remote-favorites {
+    position: relative;
+    width: 645px;
+    height: 120px;
+    left: 105px;
+    top: 50px;
+    z-index: 9400;
+    overflow-x: scroll;
+}
+
+.tv-remote-favorites .favorite-shortcut {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.tv-remote-favorites .favorite-shortcut:first-child {
+    margin-left: 0px;
+}
+
+.tv-remote-favorites::-webkit-scrollbar {
+    background: transparent;
+    border: none;
+    width: 20px;
+}
+
+.tv-remote-favorites::-webkit-scrollbar-track {
+    background: #a5a5a5;
+    border: 6px solid transparent;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+
+.tv-remote-favorites::-webkit-scrollbar-thumb {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: -webkit-linear-gradient(#8c918a, #656a63);
+    border-radius: 4px;
+    max-height: 50px;
+}
+
+.tv-tag-moments {
+    position: relative;
+    width: 750px;
+    margin: 0px;
+    top: 0px;
+    left: 84px;
+    font-size: 0;
+    padding: 0px;
+}
