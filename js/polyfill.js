@@ -35,4 +35,10 @@ if (window.wiiu) {
 
         return x;
     }
+
+    Document.prototype.appendChild = function(childs){
+        childs.forEach(function(child){
+            document.appendChild(child)
+        })
+    }
 }

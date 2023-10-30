@@ -1,4 +1,4 @@
-//import "./utils/wrapper";
+import "./utils/wrapper.js";
 import {Router} from "./router/MainRouter.js"
 import { HomePage } from "./components/home/main.js";
 

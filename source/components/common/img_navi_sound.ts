@@ -14,3 +14,9 @@ export function img_navi_sounds(props: img_navi_sounds_constructor){
     image.setAttribute("data-sound", props.dataSound);
     return image;
 }
+
+export function addProps(el: HTMLElement, dataSound: string){
+    el.setAttribute("data-sound", dataSound);
+    el.setAttribute('navi_touch', 'true');
+    return el;
+}
