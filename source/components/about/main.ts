@@ -1,7 +1,7 @@
 import { ComponentTemplate } from "../../router/Component_Template.js";
 import { DivFactory } from "../common/div.js";
 import { MiiSquareComponent } from "../common/mii.js";
-import { BackComponent, reloadComponent } from "../home/wrapper.js";
+import { BackComponent, HomeComponent, reloadComponent } from "../home/wrapper.js";
 import { ComponentDeveloper, Type_Developers } from "./developers.js";
 
 export function TViiLogo(){
@@ -29,9 +29,7 @@ export class AboutComponent extends ComponentTemplate<{Developers: Type_Develope
 
             $about_container.appendChild(Header);
             $about_container.appendChild(TViiLogo())
-            $about_container.appendChild(reloadComponent())
-            $about_container.appendChild(this.developers())
-            $container.appendChild(BackComponent('/'));
+            $about_container.appendChild(HomeComponent())
             $container.appendChild(MiiSquareComponent());
             $container.appendChild($about_container);
             res($container)

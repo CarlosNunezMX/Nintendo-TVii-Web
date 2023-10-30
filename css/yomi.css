@@ -36,3 +36,23 @@
     color: white;
     font-size: 22px;
 }
+.mii_welcome{
+    position: fixed;
+    left: 110px;
+    top: 30px;
+}
+
+.mii_welcome > * {
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+}
+
+.wrapper{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}

@@ -61,7 +61,7 @@ body.tag {
     position: absolute;
     top: -5px;
     left: -36px;
-    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAeCAYAAACiyHcXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVFhH7Za9SgQxFEYzgtgpiCD+wBZqYSWCpYUIio2P4JY+hq+hjaVgYWujWNnIgo2IIqKN2Gihq4iFwnhucmfGJeMPuJlFyIHDzU3C5huY3Y2JKInWnDRNeyiTWMcF7MO/0sQGruNFkiTPMvklhFjGGwzBI66iPGg5LE7gHYakiYt6pA+L23ZbeI71SEvLO8HiPWXAdcHp5914kEGXbQuqCiDMafVCVMm01o6GyIkhMmKIjBgio5MhXrV6Id61VsGJVi/ErdbQyH3i1A39EFtaQ3OIctHx4V+0hg35rw3INc7rkeWwYQl38QXbiXzeEa7oUTneHVNg4wxlFuWuOSxzv2AMZf9nrvDcDc0BnnGH2HNtQWmIDMKMUgZd9yNTuIHdtjPmDddwXxoOb7lNBYHAvXiJGTIe0eVvaduPFU/6RNl0nWWHuaq+8gU8+RDK2y+O63TkP2HMB5FUUM7Sw6KzAAAAAElFTkSuQmCC');
+    content: url('/img/tv/post.png');
 }
 
 .tvRemotePopupModal {

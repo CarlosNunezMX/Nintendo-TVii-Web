@@ -1,3 +1,4 @@
+import constants from "../components/common/constants.js";
 import { GetLang } from "../lang/GetLangs.js";
 import { ComponentTemplate } from "./Component_Template.js";
 

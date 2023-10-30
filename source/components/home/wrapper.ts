@@ -11,7 +11,7 @@ export enum MenuKind {
 function HelpComponent(){
     return SideButton({
         button_id: 'help',
-        buttonClass: 'helpBtn',
+        buttonClasses: ['helpBtn', 'topBtn', 'rightBtn', 'btn', 'bottom-left-radius'],
         dataSound: "SE_COMMON_FINISH_TOUCH_OFF",
         href: '/help'
     })
@@ -20,7 +20,7 @@ function HelpComponent(){
 export function BackComponent(href?: string){
     const button = SideButton({
         button_id: "back",
-        buttonClass: 'backBtn',
+        buttonClasses: ['backBtn', 'btn', 'bottomBtn', 'leftBtn'],
         dataSound: 'SE_A_CLOSE_TOUCH_OFF',
         href
     })
@@ -32,10 +32,27 @@ export function BackComponent(href?: string){
 
     return button;
 }
+export function HomeComponent(){
+    return SideButton({
+        button_id: 'homeSign',
+        buttonClasses: ['homeSignBtn', 'topBtn', 'rightBtn', 'btn', 'bottom-left-radius'],
+        dataSound: "SE_COMMON_FINISH_TOUCH_OFF",
+        href: '/'
+    })
+}
+
+export function RemoteComponents(){
+    return SideButton({
+        button_id: 'remote',
+        buttonClasses: ['remoteBtn', 'bottomBtn', 'rightBtn', 'btn','top-left-radius'],
+        dataSound: "SE_COMMON_FINISH_TOUCH_OFF",
+        href: '/'
+    })
+}
 export function ExitComponent(){
     const $button = SideButton({
         button_id: "exit",
-        buttonClass: 'exitBtn',
+        buttonClasses: ['exitBtn', 'leftBtn', 'bottomBtn', 'btn', 'top-right-radius'],
         dataSound: 'SE_COMMON_FINISH_TOUCH_OFF'
     })
 
@@ -47,7 +64,7 @@ export function ExitComponent(){
 export function reloadComponent(){
     const $button = SideButton({
         button_id: "reload",
-        buttonClass: 'reloadBtn',
+        buttonClasses: ['reloadBtn', 'topBtn', 'btn', 'rightBtn'],
         dataSound: 'SE_COMMON_FINISH_TOUCH_OFF'
     })
 

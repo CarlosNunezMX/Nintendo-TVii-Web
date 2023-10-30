@@ -1,0 +1,82 @@
+ul.pencil-thick-select {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 6px;
+    left: 80px;
+    width: 64px;
+    display: none;
+    background-color: rgba(36, 37, 38, 0.9);
+    position: fixed;
+    height: 200px;
+    border-radius: 5px;
+    z-index: 100;
+    border: 1px solid black;
+}
+
+ul.pencil-thick-select.show {
+    display: block;
+}
+
+ul.pencil-thick-select:before {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAhCAYAAAA/F0BXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVEhLpZZdbxJBGIXfmV2gi5rI2kTbaxurNyZGe0FLVTCobaKJP1YTYnth7W+wv6AffBRKKbAfs+N5h12Chm9OCjPd8D49c96ZobSqcq6rZTxfSrncQ50vvKelIVnH0Tv5t1St1ZaDCCF0oVgmS0ry+97iEAZ8KB+Y+eXFFQWBT8L8NqdsO6VLHw/I9wNqtW5IKZ/CIJwfwiG+3tklD0XtdhvFPqlIUaQisuLPTBW3Mb/3DsUd6tx1KQwDUnhFkSat1exMHCer9wpFql836a7XRQYAqJAiLQAABKCpy2FAqfwZbayShy6EIYp5CewgdkGkJzvhLjCg1+2Q73kUKC4GBBmgGj8hRswBGevEtm396fCrAdQb13AQmSVoFLELLjQAA8EfNO8j4p1YxD5ot+p0c8shjgPEI5bG4z8QbuPufolajUu67WIPjAVwYVwaQ4aZbG5uGAAvYRJAxABmGTfgsAvjZGvrqX724uXUDAYABMoFLPOcBSe8hOfb20sDOFzZbLbEn7MzcrL3af2Ri85IsiwbLZYk5cCsFryxxcA2yzxnYcTnhs85k1dv8jMdGQ9sgEeK8Gwk2PPzC3H668g4epBNT3FkpnjhLYYNnSRaeZ8kWnnHJuKzc/jlmwE1cIL9EHkoHH/FEJjAOTKOQJh4AHHMxVHlh8konclQyrKQjU3SQgnyEMLGyOUjXZskvg74Tq3W69Tv97E0Ps0DR7w8jVwmOknU63XF75NjWndzdM/JUiqVMl2TAoGyI3RuppNE0+7YuSGslW/7RMn3jrRtql3VqO/1Zmfyv7hrPyvfzfzJxmNklF4cwmLQyXEFmUSUXsssvpxRmf8KcJGtrJzr6r9uBvd4WmNE0AAAAABJRU5ErkJggg==');
+    position: relative;
+    left: -17px;
+    top: 12px;
+}
+
+li.pencil.t-big {
+    position: relative;
+    display: block;
+    left: 5px;
+    top: -28px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA4CAYAAAC2TwutAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANkSURBVGhD7Zq/TyJBFMcFFnMkFBaXIOEKCwsKCwoLCwtMLCwsrAhBLfjLbACNuYKSgsQrrrCwoKCgoFRCYXEFhcAK933ZZyLnvP3Fsgy5/SSbmTcsy3xn3ns7zO5WRERERMT/QIzLQLm/v0+/v7/nUU3P5/MdOqxPLGCPEonEK855m06nvWq1+oc/CozAhDUaje8o8rPZ7CAWi+1ara55xdFLJpPdUqk0tJqWY2lhNzc3O+jQKcQccNNS4Dp9wzDaywr0LYzczTTNY7jVETcFCq7bhZu2/bqpL2G1Wu0HRraMatpqWQ34jTcUzUql0rNa3ONZ2N3d3QFm6gI/anDTysHsta6urh7ZdIUnYbe3t0UkhyKboYKB7GDmmmw6EufSEYg6XJcoArNWqNfrp2w64koYRO3hnnPG5jo5plDgui2Owuj+hNEqhxlTdlB8U/JiU8RRGESd4vjG5trhAT63LBlbYbhX0QqClkZaAXG78CTbftkKm0wmF1zVDnjR+cPDgxgeojBKGDQybOpIejAYiIlEFIYsGMjab5Vg4L0Lw5e0i61/wX11D4twZWJTCiM3RLHSdWAQUIbc3t5WToA0YyRsI4A4ZV+VwpBxFv7x6ozUV2nGtHfDTyj7qhSGoNwYYXBF98Kkk3VEWu5Jrkj/XDcCCDO5uoAkbMSl9sTjcWVfJVcMfJ9vVWDGlH1VCsPJGzNjUl+VwhKJRCCblmEAV1T2VSksk8n0pKDUjfF43OXqAkphJycnJMrzXl7YIBc8SxuqSmGEYRjaCwNiH0Vh5I4otE0iFCoY/A6bXxCFkTsiibTY1A4kjV+lUkkceFEYUS6XuxgZHTPkKJvN2m552wojIKzNVZ1oc4ITcRR2fX3dhzhtXBKZ8PHy8lKMrQ8chRH0pAPinthcGxDVr1QqrgbZlTAil8u16MJshg7FOm7GP9l0xNNjJNqgfHl5OYPAQ24Ki95kMmniZuz675TfJ5pHEBfK0xeKKbfu9xlfwoiPR0v44ZXsFuO6tFRq+XlMS/gW9kG9Xi+gE0XEQFA7WyNc6zdi+skppduxtDCCYm84HBbQoTyOfW72BAbneTab0ZsCHS+xJBGIsM/QlnMqldo3TTOPzqZxfHkzB9BSiF5aIQH04krfbnkUEREREbEcW1t/ATUbSKoBElvPAAAAAElFTkSuQmCC');
+    width: 54px;
+    height: 56px;
+}
+
+li.pencil.t-big.selected {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA4CAYAAAC2TwutAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANBSURBVGhD7Zk7bBNBEIZn1oBIkELKdFCmtIScpCPpLCElvpIudFCBq4gKqCBVQoU76EjnJBKSqUg6Oy4IHaXLlJYogiL5htnzWMKJd2/PPtsbuE+ydmYtn/b3zM4+DjIyMjIy/gdQ2tQpVCmPCkriLiPCbbEjiOBYtyqEo3qAR1FniqQqrHBARX7gBpta0ELU6Uabhe8DwdfGBu5J30ikImylSquhgh02892ekWhBCOWTAPfFH4qRhD04pMUcRYKK3Z5UqXMUy411rIufiKGFLVWpxL/+zJ++uZM6BM9OSlgRz5mhhC0d0GtuXnW9iVCZnYPy0Rr+Fj+WxMKWD+kjV7RNcSdJjcUFruKUtE7oSE1JlKZ4/gs+iB2Lc8SiOaWgKu7UQK6YjQB3xTXiJCyqfiF8H3uhcIQX9bW4Rd0pFaOS7okojV4zV7+RdTyxwqIUHM86NQr58zY8FXsg8RFTEy3rzpCCLVvUrMIkWmlsk8bBgi1qVmGYiza0/mIZn1UYr1m9Y4eX8PhW81WaF7cPozC9Y+dm4I984mb3iHQFozAuqVqY96gcPBSzD6MwPjLcE9N37kvbh1EY52+SE/D0MIzTVjyuhTAyjPPaC2OSVUXeHbfF9BuCgeczc8QQzsTyG8M4banYktZruHoPHKdN2LWIWEhJI0bwQyy/MYzTKGxmLrqZdb4VmhZ8CB54c2wUFt0GIaR+p54mXLl/1gNMPMd0mA/E8hN932/AKmz2Lnzixs8iwtMkzMF78a5gFabTEUPYFtcrSEGl+QiNf7o9FZmZeajoXBbXF8749Gz9w2OF6aiFAGVx/YDgjS1amlhhmuYG1niFfyfuVOHd/J7L2xcnYZrGOr60VaEJUb8zB0/EtuIsTHPRiR562vUmTkuF8Hgsb1tOA2xfhLDGaTnphftU7uudN+bOb1suUzikHSR4Ie7Y0HNKp59rpHoMLUxTqNImKnjL5jhO220i2G6WcKiiNZIwjb6wvKU4cgRb/LRU3sgQwq5ep+JKuo2RhfUofKEF1YHnLLDE6bMo3UnQ86fGc2k7yVwykZqwv9EvCm90oNi7W6cQVi5Hs1eAON2O+fv9ZoDTqrYZGRkZ/zwAfwBHwubVg7N1AAAAAABJRU5ErkJggg==');
+}
+
+li.pencil.t-medium.selected {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA4CAYAAAC2TwutAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKYSURBVGhD7ZkxTBRREIb/2VMkmhBLSuzshBgFurOTmMBdJXZaSadWxvI6raDTUju7O0yMUEGJXnN2dF5JSTAKXnI7zrsdEz1j3Hn7donmfcnmzUzz9t95O+/tLCKRSCQSiUQikT9AOgZnoc0zDDRQwxVxZ7JoRso4AOOjXFvdJvU0HJTgwubb/BAJ7ouoyxr6G325Xg1SbPSadJiFihNM2PU2N0TQupi/ZMeAy2LrQ4NeqF+IwsLqOzz59WgkaC2LFITQGQxxr2j2CgmbbfPFiQTvxFzIImGQm9qnFEt7TXLL1AtvYZqpHTGDivqJvrx3c76ZS3Q0c/wZz2UoS5Rj5lwNbbXNeAmb3+RVZtxVtzRkjvqoynpgXoq6BD+JOZ1FSoZxwmdxqXuLDjSSC3PGjg9H1a8aUQ7CJIZ4rF5uzMI4wQM1K0Mq5JpbKermwiTs6ht2pwnfDdgfydqXI9TVy4VJWI2xqmblJITbaubCthRpdKA9FaRCzqqZC5swrrBo/I5pbmvx+G+FmSrTaWIVZtokA2M6M/4zwuSIVN7Jgwn7alaOdW5bxhjbalUOD7GpZi5Mwi5MYVeGYH0JExPYUisXJmG7N+hEhteZVyGETumnez6DlvuUULcSZBm21MyNWdjoyRGeqVs6RHjp03s0C3Ocn8JTGfYyr1T634Z4pLYJL2HuXUtS3BGzvH3NfTmnaFbezHGtMZl4SczwVdKJIjSLtL+9hTncxJK5OTFD9t/78omy2F0hU3kfp5Awh8ucvHOL8oQ3NOQNy1bieokhflQU6gSP4/6wpDWsyx02NJQLqXxu43/yfpmCFaSgwn5w7S1PY4CbVMOKiHRfvuN9Eld0epRiW26gU6SVHYlEIpFIJBKJ2AC+A7zAv02QWyPLAAAAAElFTkSuQmCC');
+}
+
+li.pencil.t-normal.selected {
+    background: url('/img/pencil/dot_blue.png');
+}
+
+li.pencil.t-tiny.selected {
+    background: url('/img/pencil/dot_tiny_blue.png');
+}
+
+li.pencil.t-medium {
+    position: relative;
+    display: block;
+    left: 5px;
+    top: -28px;
+    background: url('/img/pencil/dot_medium.png');
+    width: 54px;
+    height: 56px;
+}
+
+li.pencil.t-normal {
+    position: relative;
+    display: block;
+    left: 5px;
+    top: -39px;
+    background: url('/img/pencil/dot.png');
+    width: 54px;
+    height: 56px;
+}
+
+li.pencil.t-tiny {
+    position: relative;
+    display: block;
+    left: 5px;
+    top: -58px;
+    background: url('/img/pencil/dot_tiny.png');
+    width: 54px;
+    height: 56px;
+}
