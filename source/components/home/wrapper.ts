@@ -2,40 +2,68 @@ import { DivFactory } from "../common/div.js";
 import { addProps } from "../common/img_navi_sound.js";
 import { Link } from "../common/link.js";
 import { MiiSquareComponent } from "../common/mii.js";
+import { SideButton } from "../common/sideButton.js";
+import { Icons } from "./icons.js";
+export enum MenuKind {
+    Home,
+    Back
+}
+function HelpComponent(){
+    return SideButton({
+        button_id: 'help',
+        buttonClass: 'helpBtn',
+        dataSound: "SE_COMMON_FINISH_TOUCH_OFF",
+        href: '/help'
+    })
+}
 
+export function BackComponent(href?: string){
+    const button = SideButton({
+        button_id: "back",
+        buttonClass: 'backBtn',
+        dataSound: 'SE_A_CLOSE_TOUCH_OFF',
+        href
+    })
+
+    button.onclick = (ev) => {
+        ev.preventDefault();
+        window.history.back();
+    }
+
+    return button;
+}
 export function ExitComponent(){
-    const $container = addProps(
-        DivFactory([], 'exit'),
-        ""
-    );
+    const $button = SideButton({
+        button_id: "exit",
+        buttonClass: 'exitBtn',
+        dataSound: 'SE_COMMON_FINISH_TOUCH_OFF'
+    })
 
-    const $link = Link('javascript:void(0);', true);
-    $link.classList.add('exitBtn')
-    $link.setAttribute('data-sound', 'SE_COMMON_FINISH_TOUCH_OFF');
-
-    $link.onclick = (ev) => {
+    $button.onclick = (ev) => {
         vino.exit()
     }
-    
-    $container.appendChild($link);
-    return $container;
+    return $button;
+}
+export function reloadComponent(){
+    const $button = SideButton({
+        button_id: "reload",
+        buttonClass: 'reloadBtn',
+        dataSound: 'SE_COMMON_FINISH_TOUCH_OFF'
+    })
+
+    $button.onclick = (ev) => {
+        window.location.reload()
+    }
+    return $button;
 }
 
-export function Menu(){
-    const $container = DivFactory([], 'menu-buttons');
-    const $mii = MiiSquareComponent();
-    const $exit = ExitComponent();
 
-    $container.appendChild($exit);
-    $container.appendChild($mii)
+export function Wrapper(Kind: MenuKind){
+    const MenuWrapper = DivFactory([]);
+    MenuWrapper.appendChild(HelpComponent());
+    MenuWrapper.appendChild(MiiSquareComponent());
+    MenuWrapper.appendChild(ExitComponent());
 
-    return $container;
-}
-
-export function Wrapper(){
-    const MenuWrapper = DivFactory([], "wrapper-home")
-    MenuWrapper.appendChild(Menu());
-
-
+    MenuWrapper.appendChild(Icons())
     return MenuWrapper;
 }

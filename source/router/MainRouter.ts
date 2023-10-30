@@ -3,7 +3,7 @@ import { ComponentTemplate } from "./Component_Template.js";
 
 type RouterPage = {
     Route: string;
-    Component: ComponentTemplate;
+    Component: ComponentTemplate<any>;
 };
 
 export class Router {
@@ -14,7 +14,7 @@ export class Router {
         this.MainElement = root;
         this.events()
     }
-    get(route: string, Component: ComponentTemplate){
+    get(route: string, Component: ComponentTemplate<any>){
         const has_registered = this.Routes.find(({Route}) => Route === route);
         if(has_registered)
             throw GetLang()
@@ -39,7 +39,7 @@ export class Router {
         }
     }
     enroute(){
-        const route = window.location.hash;
+        let route = window.location.hash;
         console.log("Enrouting", route)
         if(route === ""){
             const hasMainRoute = this.hasMainRoute();
@@ -47,8 +47,16 @@ export class Router {
                 // @ts-ignore
                 return this.render(hasMainRoute.Page);
             }
+        };
+        route = this.prepareRoute(route);
+        console.log(route);
+        
+        const endRoute = this.Routes.find(({Route}) => Route === route)       
+        if(!endRoute){
+            return wiiuDialog.alert("Page not fount!", "Ok");
         }
-        this.Routes.find(({Route}) => Route === route)       
+
+        return this.render(endRoute)
     }
 
     render(Page: RouterPage){

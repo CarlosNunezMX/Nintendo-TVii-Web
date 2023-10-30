@@ -1,0 +1,38 @@
+/**
+    * @author CarlosNunezMX
+    Some custom css and rewriting of some david sosa's css
+    Ill adding it for this file, and making updates to github.
+    * @todo: add a css preprocessor    
+**/
+.about_container {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    color: #ffffff;
+}
+.about_container .developer {
+    background: rgba(255, 237, 237, 0.078);
+    border-radius: 5px;
+    font-size: x-large;
+    padding: 0 5px;
+}
+.about_container .developer > * {
+    margin: 0;
+    padding: 0;
+}
+.Section_Icon {
+    position: relative;
+    width: 129px;
+    height: 170px;
+    padding-right: 32px;
+    display: inline-block;
+}
+.Section_Label {
+    position: relative;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 22px;
+}

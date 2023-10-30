@@ -6,6 +6,7 @@ type UserData = {
 
 class GlobalVariables {
     Slot: number = vino.act_getCurrentSlotNo();
+    // @ts-ignore
     Mii: UserData = {};
     constructor(){
         this.Mii.MiiImage = vino.act_getMiiImage(this.Slot);

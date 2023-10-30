@@ -1,6 +1,7 @@
 import { isWiiU } from "./isWiiU.js";
 
 if(!isWiiU()){
+    // @ts-ignore
     window.vino = {
         "act_getCurrentSlotNo": () => 1,
         "act_getMiiImage": (slot: number) => 'http://mii-images.account.nintendo.net/wt2v2fiu6ldf_happy_face.png',

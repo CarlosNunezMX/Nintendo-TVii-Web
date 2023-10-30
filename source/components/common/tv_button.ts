@@ -4,7 +4,7 @@ import { DivFactory } from "./div";
 import { img_navi_sounds } from "./img_navi_sound";
 import { ChangeChannel } from "../../utils/goToChannel";
 
-export class TVControl extends ComponentTemplate{
+export class TVControl extends ComponentTemplate<void>{
     render(): Promise<HTMLElement> {
         return new Promise((res) => {
             const container = document.createElement("div");
