@@ -1,4 +1,5 @@
 import constants from "../components/common/constants.js";
+import { DevMarkComponent } from "../components/common/devMark.js";
 import { GetLang } from "../lang/GetLangs.js";
 import { ComponentTemplate } from "./Component_Template.js";
 
@@ -10,7 +11,11 @@ type RouterPage = {
 export class Router {
     Routes: RouterPage[] = [];
     MainElement: HTMLElement;
-    
+    dev = false;
+    setDev(state: boolean){
+        this.dev = state;
+        return this;
+    }
     constructor(root: HTMLElement){
         this.MainElement = root;
         this.events()
@@ -70,6 +75,8 @@ export class Router {
         Component.render()
             .then((rendered) => {
                 this.MainElement.appendChild(rendered);
+                if(this.dev)
+                    this.MainElement.appendChild(DevMarkComponent());
                 document.title = Component.RouteName;
             })
     }

@@ -144,3 +144,7 @@ body.tag {
     font-size: 0;
     padding: 0px;
 }
+
+.settings_page_container{
+    display: inline-block;
+}

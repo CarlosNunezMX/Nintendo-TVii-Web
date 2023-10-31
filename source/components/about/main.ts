@@ -18,6 +18,12 @@ export class AboutComponent extends ComponentTemplate<{Developers: Type_Develope
         Developers: [{
             Contribution: "Main developer and founder.",
             Name: "David Sosa"
+        }, {
+            Contribution: "Typescript Rewriter",
+            Name: "CarlosNunezMX"
+        }, {
+            Contribution: "CoDeveloper and Saphire Owner",
+            Name: "NoNameGiven"
         }]
     }
     render(): Promise<HTMLElement> {
@@ -26,9 +32,10 @@ export class AboutComponent extends ComponentTemplate<{Developers: Type_Develope
             const $about_container = DivFactory(["about_container"])
             const Header = document.createElement('h1');
             Header.innerText = "About US";
-
+            
             $about_container.appendChild(Header);
             $about_container.appendChild(TViiLogo())
+            $about_container.appendChild(this.developers())
             $about_container.appendChild(HomeComponent())
             $container.appendChild(MiiSquareComponent());
             $container.appendChild($about_container);

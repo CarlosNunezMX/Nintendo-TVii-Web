@@ -14,7 +14,8 @@
     background: rgba(255, 237, 237, 0.078);
     border-radius: 5px;
     font-size: x-large;
-    padding: 0 5px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 .about_container .developer > * {
     margin: 0;
@@ -55,4 +56,14 @@
     padding: 0px;
     top: 0px;
     left: 0px;
+}
+
+.devMark{
+    position: fixed;
+    top: 25px;
+    left: 400px;
+    background-color: #f00;
+    padding: 5px 10px;
+    font-weight: 700;
+    color: #ffffff;
 }

@@ -2,6 +2,7 @@ import { ComponentTemplate } from "../../router/Component_Template.js";
 import constants from "../common/constants.js";
 import { DivFactory } from "../common/div.js";
 import { HomeComponent, RemoteComponents } from "../home/wrapper.js";
+import { ButtonGrid } from "./settings.grid.js";
 
 export class SettingsMain extends ComponentTemplate<void>{
     RouteName: string = "Settings";
@@ -9,6 +10,7 @@ export class SettingsMain extends ComponentTemplate<void>{
         return new Promise(res => {
             const $container = DivFactory(['wrapper']);
             $container.appendChild(this.miiInfo())
+            $container.appendChild(ButtonGrid())
             $container.appendChild(HomeComponent());
             $container.appendChild(RemoteComponents());
             res($container);

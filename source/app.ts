@@ -7,7 +7,8 @@ import { SettingsMain } from "./components/settings/settings.main.js";
 const $app = document.getElementById('app');
 if(!$app)
     throw wiiuDialog.alert("Warning: Main element was not found.", "Exit")
-const MainRouter = new Router($app);
+const MainRouter = new Router($app)
+    .setDev(true);
 
 MainRouter.get('/', new HomePage())
 MainRouter.get('/help', new AboutComponent())
