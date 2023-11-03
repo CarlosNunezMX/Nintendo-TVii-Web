@@ -16,6 +16,7 @@
     "@pretendonetwork/wiiu-browser-types": "^1.0.0",
     "@pretendonetwork/wiiu-dialog-types": "^1.0.0",
     "@pretendonetwork/wiiu-vino-types": "^1.0.0",
+    "@types/node": "^20.8.10",
     "applet-types": "github:PretendoNetwork/applet-types",
     "typescript": "^5.2.2"
   },
